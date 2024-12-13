@@ -1,0 +1,104 @@
+header {
+  background-color: #0d192b;
+  height: 80px;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #ccc;
+}
+
+a {
+  font-size: 20px;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  margin-right: 120px;
+}
+
+.search-icon {
+  margin-right: 20px;
+}
+
+.profile-icon {
+  margin-left: 10px;
+}
+
+login a {
+  font-size: 20px;
+}
+.login-dropdown {
+  width: 400px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.login-column {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.login-new-client {
+  border-right: 1px solid gray;
+}
+
+.login-new-client h6,
+.login-existing-client h6 {
+  margin-bottom: 10px;
+}
+
+.login-new-client p {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 16px;
+}
+
+.create-account-btn {
+  background-color: #6f2ed6;
+  border: none;
+}
+
+.create-account-btn:hover {
+  background-color: #5821a9;
+}
+
+.login-existing-client a {
+  color: white;
+}
+
+.login-existing-client a:hover {
+  text-decoration: underline;
+}
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+}
+
+section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.btn-outline-dark {
+  border-color: #000;
+  color: #000;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+footer {
+  background-color: #0d192b;
+}

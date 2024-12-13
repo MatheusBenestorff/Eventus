@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventus</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body>
+    <header class="text-white py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Navigation Left -->
+        <nav class="d-flex align-items-center">
+          <!-- Dropdown Filmes -->
+          <div class="dropdown me-3">
+            <a
+              href="#"
+              class="text-white"
+              id="filmesDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Filmes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="filmesDropdown">
+              <li><a class="dropdown-item" href="#">Em Cartaz</a></li>
+              <li><a class="dropdown-item" href="#">Em Breve</a></li>
+              <li><a class="dropdown-item" href="#">Pré Estreia</a></li>
+            </ul>
+          </div>
+
+          <!-- Dropdown Eventos -->
+          <div class="dropdown me-3">
+            <a
+              href="#"
+              class="text-white"
+              id="eventosDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Eventos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="eventosDropdown">
+              <li><a class="dropdown-item" href="#">Stand-up</a></li>
+              <li><a class="dropdown-item" href="#">Festivais</a></li>
+              <li><a class="dropdown-item" href="#">Exposições</a></li>
+            </ul>
+          </div>
+
+          <!-- Dropdown Cinemas -->
+          <div class="dropdown me-3">
+            <a
+              href="#"
+              class="text-white"
+              id="cinemasDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Cinemas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="cinemasDropdown">
+              <li><a class="dropdown-item" href="#">São Paulo</a></li>
+              <li><a class="dropdown-item" href="#">Rio de Janeiro</a></li>
+              <li><a class="dropdown-item" href="#">Minas Gerais</a></li>
+              <li><a class="dropdown-item" href="#">Bahia</a></li>
+              <li><a class="dropdown-item" href="#">Pernambuco</a></li>
+              <li><a class="dropdown-item" href="#">Paraná</a></li>
+            </ul>
+          </div>
+
+          <!-- Dropdown Sobre -->
+          <div class="dropdown">
+            <a
+              href="#"
+              class="text-white"
+              id="marcaDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sobre
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="sobreDropdown">
+              <li><a class="dropdown-item" href="#">Contato</a></li>
+              <li><a class="dropdown-item" href="#">História</a></li>
+              <li><a class="dropdown-item" href="#">Notícias</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Logo -->
+        <div class="navbar-brand mx-auto">
+          <img src="img/logo.png" alt="Logo" class="logo" />
+        </div>
+
+         <!-- Navigation Right -->
+         <div class="d-flex align-items-center">
+          <!-- Ícone de Lupa -->
+<div class="dropdown me-3 search-icon">
+  <a
+    href="#"
+    class="text-white"
+    id="searchDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <i class="fas fa-search"></i>
+  </a>
+  <div class="dropdown-menu dropdown-menu-end p-3" style="min-width: 300px;">
+    <form>
+      <div class="mb-3">
+        <label for="searchInput" class="form-label">Resultados da sua busca / Código do configurador</label>
+        <input
+          type="text"
+          class="form-control"
+          id="searchInput"
+          placeholder="Digite aqui..."
+        />
+      </div>
+      <p class="text-muted small">
+        Pesquise através dos tipos de veículos, modelos, códigos de configuração ou por acessórios, outros produtos e informações.
+      </p>
+      <button type="submit" class="btn btn-primary w-100">Pesquisar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Ícone de Perfil -->
+<div class="dropdown profile-icon">
+  <a
+    href="#"
+    class="text-white"
+    id="loginDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <i class="fas fa-user me-2"></i> Entre ou Cadastre-se
+  </a>
+  <div class="dropdown-menu dropdown-menu-end login-dropdown">
+    <div class="d-flex justify-content-between">
+      <div class="login-column login-new-client">
+        <h6 class="fw-bold">Ainda não é cliente Ingresso.com?</h6>
+        <p>
+          Compre ingressos e combos de pipoca para ir ao cinema com segurança e mais comodidade!
+        </p>
+        <a href="#" class="btn btn-primary w-100 create-account-btn">
+          Criar uma nova conta
+        </a>
+      </div>
+      <div class="login-column login-existing-client">
+        <h6 class="fw-bold">Cliente Ingresso.com</h6>
+        <a href="#" class="text-white text-decoration-none">Entrar na minha Conta</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+  
+    </header>
+
+    <main>
+      <!-- Carousel -->
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/gladiador.webp"
+              class="d-block w-100"
+              alt="Imagem 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="img/venom3.jpg" class="d-block w-100" alt="Imagem 2" />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/todotempoquetemos.jpg"
+              class="d-block w-100"
+              alt="Imagem 3"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <section class="text-center py-5">
+        <h1>Compre seus ingressos para filmes e eventos</h1>
+      </section>
+    </main>
+
+    <footer class="text-white text-center py-3">
+      <p>&copy; 2024 Compra de Ingressos. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
