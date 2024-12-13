@@ -1,0 +1,86 @@
+Códigos SQL
+
+CREATE DATABASE eventusdb;
+
+USE eventusdb;
+
+
+CREATE TABLE administrador (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    senha VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE cinemas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    rua VARCHAR(150),
+    numero VARCHAR(10),
+    cidade VARCHAR(100),
+    estado VARCHAR(50)
+
+);
+
+
+CREATE TABLE eventos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    tipo VARCHAR(50) NOT NULL,
+    isStandUp BOOLEAN NOT NULL DEFAULT FALSE,
+    isFestival BOOLEAN NOT NULL DEFAULT FALSE,
+    isExposicao BOOLEAN NOT NULL DEFAULT FALSE,
+    cartaz VARCHAR(255)
+);
+
+
+CREATE TABLE filmes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    data_estreia DATE,
+    em_cartaz BOOLEAN NOT NULL DEFAULT FALSE,
+    em_breve BOOLEAN NOT NULL DEFAULT FALSE,
+    pre_estreia BOOLEAN NOT NULL DEFAULT FALSE,
+    cartaz VARCHAR(255)
+    descricao TEXT,
+    diretor VARCHAR(100),
+    genero VARCHAR(50),
+    duracao INT,
+    banner VARCHAR(1000)
+);
+
+
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    telefone VARCHAR(15),
+    cep VARCHAR(8),
+    rua VARCHAR(150),
+    bairro VARCHAR(100),
+    numero VARCHAR(10),
+    estado VARCHAR(50),
+    cidade VARCHAR(100)
+);
+
+CREATE TABLE sessoes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_filme INT NOT NULL,
+    id_cinema INT NOT NULL,
+    horario TIME NOT NULL,
+    tipo VARCHAR(50), 
+    data DATE NOT NULL,
+    FOREIGN KEY (id_filme) REFERENCES filmes(id),
+    FOREIGN KEY (id_cinema) REFERENCES cinemas(id)
+);
+
+
+
+USE eventusdb;
+
+INSERT INTO administrador (senha, email)
+VALUES
+('adm123', 'adm@adm');
