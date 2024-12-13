@@ -34,7 +34,7 @@
 }
 </style>
 <%
-    // Obter os filmes e exposições da requisição
+
     List<Filme> filmesPreview = (List<Filme>) request.getAttribute("filmesPreview");
     List<Evento> exposicoesPreview = (List<Evento>) request.getAttribute("exposicoesPreview");
     if (filmesPreview == null) {
@@ -159,7 +159,6 @@
             </div>
         </div>
 
-        <!-- Notícias em 2 colunas - Primeira coluna -->
         <div class="col-12 col-md-3 mb-4">
             <div class="card h-100" style="background-color: #0d1117; border: none;">
                 <img src="https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/2816/74e21c32d7a797a4e63ca08460727728.jpg" class="card-img-top" alt="Notícia 2" style="height: 250px; object-fit: cover;">
@@ -212,7 +211,6 @@
         </div>
     </div>
 </section>
-        <!-- Seção Parallax -->
 
 <section class="parallax d-flex align-items-center justify-content-center">
     <section class="container my-4">
@@ -252,15 +250,6 @@
 </section>
 
 </section>
-
-        
-        
-<!-- Seção de Cinemas em Destaque -->
-
-
-
-
-
 
 
 </main>
